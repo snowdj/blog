@@ -5,6 +5,7 @@ name: "Test rusty shutter"
 markdown: rouge
 
 author: "snowdj"
+url: https://snowdj.github.io/blog
 atom-baseurl: "https://snowdj.github.io/blog"
 disqus: "snowdj"
 
