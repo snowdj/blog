@@ -4,11 +4,12 @@ layout: default
 
 <div>
   <ul class="listing">
-  {% for post in site.posts limit: 1 %}
+  {% for post in site.posts limit: 3 %}
   <article class="content">
     <section class="title">
       <h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
     </section>
+    
     <section class="meta">
     <span class="time">
       <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
@@ -22,13 +23,18 @@ layout: default
     {% endif %}
 
     </section>
+    
     <section class="post">
     {{ post.content }}
     </section>
-    </article>
+    
+  </article>
   {% endfor %}
+  
   </ul>
+  
   <div class="divider"></div>
+  
   <ul class="listing main-listing">
     <li class="listing-seperator">Happend earlier this year</i>
   {% capture year %}{{ site.time | date:"%Y"}}{% endcapture %}
@@ -44,4 +50,5 @@ layout: default
   {% endfor %}
     <li class="listing-seperator"><a href="{{ site.url }}/archive.html">Long long ago</a></li>
   </ul>
+  
 </div>
